@@ -5,8 +5,16 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './movie-carousel.component.html',
-  styleUrl: './movie-carousel.component.scss'
+  styleUrl: './movie-carousel.component.scss',
+
+
 })
 export class MovieCarouselComponent {
+
+  constructor () {}
+
+  ngOnInit(){
+
+  }
 
 }
