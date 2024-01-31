@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, Input } from '@angular/core';
 import Swiper from 'swiper';
+import { IVideoContent } from '../../models/video-content.interface';
 
 
 
@@ -13,7 +14,9 @@ import Swiper from 'swiper';
 
 })
 export class MovieCarouselComponent implements OnInit, AfterViewInit{
-
+  
+  @Input() videoContents:IVideoContent[] = [];
+  @Input() title!:string;
   @ViewChild('swiperContainer') swiperContainer!: ElementRef
   constructor () {}
   ngAfterViewInit(): void {
